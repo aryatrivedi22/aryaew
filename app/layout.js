@@ -10,7 +10,7 @@ const nunito = Nunito({
 });
 
 export const metadata = {
-  title: "Arya Engineering works",
+  title: "Arya Engineering Works",
   description: "Quality Products and On-time Delivery of products",
 };
 

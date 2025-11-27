@@ -1,14 +1,17 @@
 import CTASection from "@/components/home/cta";
+import Image from "next/image";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
-        <img
+        <Image
+          fill
+          loading="eager"
           src="/about/services-hero.jpg"
           alt="Arya Engineering Works"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 object-cover"
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 container mx-auto px-4">
@@ -34,7 +37,7 @@ const About = () => {
                   commitment to excellence has made us a leader in providing
                   premium industrial engineering components.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground text-lg leading-relaxed">
                   With decades of experience, we have built a reputation for
                   delivering products known for their fine quality and finish,
                   accurate dimensions and designs, durability, reliability and
@@ -43,10 +46,12 @@ const About = () => {
                 </p>
               </div>
               <div className="rounded-lg overflow-hidden shadow-lg">
-                <img
+                <Image
+                  width={800}
+                  height={500}
                   src="/about/industrial-hardware.jpg"
                   alt="Industrial Components"
-                  className="w-full h-full object-cover"
+                  className="object-cover"
                 />
               </div>
             </div>
@@ -58,7 +63,9 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1 rounded-lg overflow-hidden shadow-lg">
-                <img
+                <Image
+                  width={800}
+                  height={500}
                   src="/about/ball-valve.jpg"
                   alt="Manufacturing"
                   className="w-full h-full object-cover"
@@ -74,7 +81,7 @@ const About = () => {
                   highest industry standards. We maintain strict quality checks
                   at every stage of production.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground text-lg leading-relaxed">
                   From high-pressure ball valves to custom fittings and
                   assemblies, each component is crafted with precision
                   engineering. Our ISO-certified processes ensure consistent
@@ -99,7 +106,7 @@ const About = () => {
                   custom solutions tailored to your exact specifications. We
                   work closely with clients to understand their unique needs.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground text-lg leading-relaxed">
                   Our expertise spans across various industrial applications
                   including hydraulic systems, electrical components, and
                   specialized fittings. We pride ourselves on delivering
@@ -107,10 +114,12 @@ const About = () => {
                 </p>
               </div>
               <div className="rounded-lg overflow-hidden shadow-lg">
-                <img
+                <Image
+                  width={800}
+                  height={500}
                   src="/about/custom-fittings.jpg"
                   alt="Custom Solutions"
-                  className="w-full h-full object-cover"
+                  className="object-cover"
                 />
               </div>
             </div>
@@ -122,10 +131,12 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1 rounded-lg overflow-hidden shadow-lg">
-                <img
+                <Image
+                  width={800}
+                  height={500}
                   src="/about/oem-supply.jpg"
                   alt="Global Operations"
-                  className="w-full h-full object-cover"
+                  className="object-cover"
                 />
               </div>
               <div className="order-1 md:order-2">
@@ -139,7 +150,7 @@ const About = () => {
                   committed to maintaining the highest levels of precision and
                   reliability.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground text-lg leading-relaxed">
                   Serving clients worldwide, we have established ourselves as a
                   trusted partner for industrial hydraulic solutions. Our global
                   reach combined with local expertise enables us to provide
