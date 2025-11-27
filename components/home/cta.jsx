@@ -1,7 +1,14 @@
+"use client";
+import { motion } from "motion/react";
+
 const CTASection = () => {
   return (
     <section className="w-full pb-24 pt-8 px-10 bg-gray-100">
-      <a
+      <motion.a
+        initial={{ scale: 0.8, opacity: 0 }} // Start 100px left and invisible
+        whileInView={{ scale: 1, opacity: 1 }} // Animate to final position
+        transition={{ duration: 0.4 }} // Animation duration and easing
+        viewport={{ once: true }}
         href="/products"
         className="block w-full bg-linear-to-tr from-yellow-600 via-yellow-500/90 to-yellow-500/60 py-6 px-4 shadow transition-all duration-300 hover:shadow-2xl rounded-xl group"
       >
@@ -11,7 +18,7 @@ const CTASection = () => {
             Your Business
           </h2>
         </div>
-      </a>
+      </motion.a>
     </section>
   );
 };

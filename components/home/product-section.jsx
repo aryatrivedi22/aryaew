@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { productsHomePage } from "@/app/data/products-home";
+import { motion } from "motion/react";
 
 const ProductsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -52,7 +53,12 @@ const ProductsSection = () => {
       <div className="container px-2 md:px-8 mx-auto">
         <div className="grid grid-cols-1 gap-8">
           {/* TITLE AND DESC */}
-          <div className="text-left md:text-center mx-2 mb-4">
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }} // Start 100px left and invisible
+            whileInView={{ scale: 1, opacity: 1 }} // Animate to final position
+            transition={{ duration: 0.6, ease: "easeOut" }} // Animation duration and easing
+            className="text-left md:text-center mx-2 mb-4"
+          >
             <p className="text-yellow-600 font-bold mb-4 text-sm tracking-wider uppercase">
               Explore our products
             </p>
@@ -65,7 +71,7 @@ const ProductsSection = () => {
               and experienced supplier of specialized engineering components and
               industrial hardware.
             </p>
-          </div>
+          </motion.div>
 
           {/* PRODUCTS SECTION */}
           <div className="relative md:mx-16">

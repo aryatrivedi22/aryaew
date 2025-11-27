@@ -1,6 +1,8 @@
-import { Check, Handshake } from "lucide-react";
+"use client";
+import { Check } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { motion } from "motion/react";
 
 const products = [
   "High Pressure Ball Valves",
@@ -19,7 +21,12 @@ const AboutSection = () => {
     <section id="about" className="px-1 py-12 md:px-8 md:py-20 bg-gray-100">
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
         {/* LEFT side */}
-        <div>
+        <motion.div
+          initial={{ x: -100, opacity: 0 }} // Start 100px left and invisible
+          whileInView={{ x: 0, opacity: 1 }} // Animate to final position
+          transition={{ duration: 1, type: "spring", stiffness: 100 }}
+          viewport={{ once: true }}
+        >
           <p className="text-yellow-600 font-semibold mb-3 text-sm tracking-wider">
             WHO WE ARE
           </p>
@@ -50,10 +57,16 @@ const AboutSection = () => {
               Know More
             </Button>
           </Link>
-        </div>
+        </motion.div>
 
         {/* RIGHT side */}
-        <div className="bg-gray-300 p-8 rounded-lg">
+        <motion.div
+          initial={{ x: 100, opacity: 0 }} // Start 100px left and invisible
+          whileInView={{ x: 0, opacity: 1 }} // Animate to final position
+          transition={{ duration: 1, type: "spring", stiffness: 100 }}
+          viewport={{ once: true }}
+          className="bg-gray-300 p-8 rounded-lg"
+        >
           <h3 className="text-2xl font-bold text-gray-900 mb-6">
             We deal in a wide range of products including:
           </h3>
@@ -65,7 +78,7 @@ const AboutSection = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

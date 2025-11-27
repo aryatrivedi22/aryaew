@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import ZoomOutOnScroll from "../ui/zoom-out";
 
 // Hero Carousel Component
 const slides = [
@@ -61,12 +62,14 @@ const HeroCarousel = () => {
                 <p className="text-sm font-semibold mb-4 tracking-wider">
                   {slide.badge}
                 </p>
-                <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                  {slide.title}
-                </h2>
-                <p className="text-lg md:text-xl mb-8 text-primary-foreground/90">
-                  {slide.description}
-                </p>
+                <ZoomOutOnScroll>
+                  <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                    {slide.title}
+                  </h1>
+                  <p className="text-lg md:text-xl mb-8 text-primary-foreground/90">
+                    {slide.description}
+                  </p>
+                </ZoomOutOnScroll>
                 {/* BUTTONS */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/about">
@@ -97,14 +100,14 @@ const HeroCarousel = () => {
       <button
         onClick={prevSlide}
         // Put arrows above slides so they're always clickable/visible
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-primary-foreground/20 hover:bg-primary-foreground/30 text-primary-foreground p-2 rounded-full transition-colors z-30"
+        className="absolute left-0.5 md:left-4 top-1/2 -translate-y-1/2 bg-primary-foreground/20 hover:bg-primary-foreground/30 text-primary-foreground p-2 rounded-full transition-colors z-30"
         aria-label="Previous slide"
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-primary-foreground/20 hover:bg-primary-foreground/30 text-primary-foreground p-2 rounded-full transition-colors z-30"
+        className="absolute right-0.5 md:right-4 top-1/2 -translate-y-1/2 bg-primary-foreground/20 hover:bg-primary-foreground/30 text-primary-foreground p-2 rounded-full transition-colors z-30"
         aria-label="Next slide"
       >
         <ChevronRight className="h-6 w-6" />

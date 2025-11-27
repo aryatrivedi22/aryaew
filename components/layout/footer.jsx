@@ -92,14 +92,15 @@ const Footer = () => {
               Services
               <span className="absolute left-4 -bottom-2 w-8 h-0.5 bg-yellow-600 rounded-full -translate-x-1/2" />
             </h4>
-            <div className="space-y-3 text-sm">
+            <div className="flex flex-col space-y-3 text-sm">
               {services.map((service) => (
-                <p
+                <a
                   key={service}
+                  href="/rental"
                   className="w-fit text-primary-foreground/80 hover:text-primary-foreground hover:underline transition-all cursor-pointer"
                 >
                   {service}
-                </p>
+                </a>
               ))}
             </div>
           </div>

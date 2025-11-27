@@ -428,10 +428,12 @@ const Rental = () => {
               <Phone className="w-5 h-5" />
               Call: 8850409725 / 9892279517
             </Button>
-            <Button size="lg" variant="outline" className="gap-2">
-              <Mail className="w-5 h-5" />
-              Email Us
-            </Button>
+            <a href="mailto:aryaengineeringwork24@gmail.com">
+              <Button size="lg" variant="outline" className="gap-2">
+                <Mail className="w-5 h-5" />
+                Email Us
+              </Button>
+            </a>
           </div>
         </section>
       </div>
