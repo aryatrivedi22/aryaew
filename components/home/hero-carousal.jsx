@@ -8,18 +8,29 @@ import ZoomOutOnScroll from "../ui/zoom-out";
 // Hero Carousel Component
 const slides = [
   {
-    image: "/hero/hero-2.jpg",
-    badge: "PREMIUM QUALITY",
-    title: "Industrial Tank Solutions",
+    image: "/hero/hero-1.webp",
+    badge: "—ENGINEERING TRUST & EXCELLENCE—",
+    title: "Advanced Hydraulic Tank Jacking Solutions",
     description:
-      "Comprehensive tank jacking equipment and industrial fluid management systems since 1996.",
+      "Since 2023, Arya Engineering Works has been a leader in delivering robust industrial fluid power solutions.",
   },
   {
-    image: "/hero/hero-1.jpg",
-    badge: "YOU CAN TRUST US",
-    title: "Hydraulic Systems Engineering",
-    description:
-      "Advanced industrial hydraulic solutions for modern manufacturing and engineering applications.",
+    image: "/hero/hero-2.webp",
+    badge: "",
+    title: "Launch and Recovery Systems [LARS]",
+    description: "",
+  },
+  {
+    image: "/hero/hero-3.webp",
+    badge: "",
+    title: "POWER PACK",
+    description: "",
+  },
+  {
+    image: "/hero/hero-4.webp",
+    badge: "",
+    title: "HYDRAULIC CYLINDER",
+    description: "",
   },
 ];
 
@@ -53,7 +64,7 @@ const HeroCarousel = () => {
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${slide.image})` }}
           >
-            <div className="absolute inset-0 bg-accent/10" />
+            <div className="absolute inset-0 bg-black/20" />
           </div>
 
           <div className="relative h-full flex items-center justify-center">
@@ -63,7 +74,7 @@ const HeroCarousel = () => {
                   {slide.badge}
                 </p>
                 <ZoomOutOnScroll>
-                  <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                  <h1 className="text-5xl md:text-5xl font-extrabold mb-4 leading-tight">
                     {slide.title}
                   </h1>
                   <p className="text-lg md:text-xl mb-8 text-primary-foreground/90">
@@ -75,9 +86,9 @@ const HeroCarousel = () => {
                   <Link href="/about">
                     <Button
                       size="lg"
-                      className="bg-yellow-600 hover:bg-yellow-700 text-white font-semibold cursor-pointer"
+                      className="bg-[#708c98] hover:bg-[#708c98] text-white font-semibold cursor-pointer"
                     >
-                      MORE DETAILS
+                      EXPLORE PRODUCTS
                     </Button>
                   </Link>
                   <Link href="/contact">
@@ -86,7 +97,7 @@ const HeroCarousel = () => {
                       variant="outline"
                       className="bg-transparent text-white font-semibold hover:bg-gray-200 cursor-pointer"
                     >
-                      GET A QUOTE
+                      REQUEST A QUOTE
                     </Button>
                   </Link>
                 </div>
