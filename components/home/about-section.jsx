@@ -27,7 +27,7 @@ const AboutSection = () => {
           transition={{ duration: 1, type: "spring", stiffness: 100 }}
           viewport={{ once: true }}
         >
-          <p className="text-yellow-600 font-semibold mb-3 text-sm tracking-wider">
+          <p className="text-[#708c98] font-semibold mb-3 text-sm tracking-wider">
             WHO WE ARE
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-7">
@@ -52,7 +52,7 @@ const AboutSection = () => {
           <Link href="/about">
             <Button
               size="lg"
-              className="mt-2 md:mt-4 font-semibold text-md bg-yellow-500 hover:bg-yellow-600 cursor-pointer"
+              className="mt-2 md:mt-4 font-semibold text-md bg-[#708c98] hover:bg-[#708c98] cursor-pointer"
             >
               Know More
             </Button>
@@ -73,7 +73,7 @@ const AboutSection = () => {
           <ul className="space-y-4 list-none m-0 p-0">
             {products.map((product) => (
               <li key={product} className="flex items-center gap-3">
-                <Check className="text-yellow-700" aria-hidden="true" />
+                <Check className="text-[#708c98]" aria-hidden="true" />
                 <span className="text-gray-700 text-lg">{product}</span>
               </li>
             ))}

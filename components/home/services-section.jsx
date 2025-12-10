@@ -4,12 +4,11 @@ import { LuSquareCheckBig } from "react-icons/lu";
 
 const ServicesSection = () => {
   const services = [
-    "High Pressure Ball Valves",
-    "Industrial Hardware Solutions",
-    "Custom Fittings & Assemblies",
-    "Electrical Components Supply",
-    "Needle Valves & T Elbows",
-    "Wiper Motors & OEM Parts",
+    "Hydraulic Jacking Systems (Specialized schemes for EPC Contractors)",
+    "Automated SAW Girth Welding Machines (For circular shell plate welding)",
+    "Dependent Car Parking Systems",
+    "Diver Launch & Recovery Systems (L.A.R.S.) (For air diving operations)",
+    "Hydromatic Suspended Rope Access Platforms",
   ];
 
   return (
@@ -18,25 +17,26 @@ const ServicesSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* LEFT PART */}
           <div>
-            <p className="text-yellow-500 font-semibold text-lg mb-4 tracking-wider">
-              Arya Engineering Works
+            <p className="text-[#708c98] font-semibold text-lg mb-4 tracking-wider">
+              FLEXIBLE RENTAL SERVICES
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              The Leading Suppliers of Industrial Engineering Components
+              Smart & Affordable Access to Hydraulic Equipment Rentals
             </h2>
             <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-              Our industrial components find usage in critical applications
-              across manufacturing plants, construction sites, industrial
-              facilities, and more. We supply high-quality valves, fittings, and
-              electrical components that can be custom configured and supplied
-              with certification as required by our customers.
+              Maximize your project’s cost-efficiency by renting top-tier
+              machinery only when you need it. Arya Engineering Works offers a
+              fleet of well-maintained, safety-certified hydraulic equipment
+              ready for immediate deployment. We partner with you to ensure you
+              have the right tools for the job, reducing capital expenditure
+              while maintaining operational excellence.
             </p>
 
             {/* SERVICES LIST */}
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               {services.map((service, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <LuSquareCheckBig className="w-6 h-6 text-yellow-600 shrink-0 mt-0.5" />
+                  <LuSquareCheckBig className="w-6 h-6 text-[#708c98] shrink-0 mt-0.5" />
                   <span className="text-foreground font-medium">{service}</span>
                 </div>
               ))}
@@ -47,18 +47,18 @@ const ServicesSection = () => {
               <Link href="/products">
                 <Button
                   size="lg"
-                  className="font-semibold text-md bg-yellow-500 hover:bg-yellow-600 cursor-pointer"
+                  className="font-semibold text-md bg-[#708c98] hover:bg-[#708c98] cursor-pointer"
                 >
-                  View Products
+                  View Rental Fleet
                 </Button>
               </Link>
               <Link href="/contact">
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-2 border-gray-500 text-gray-800 text-md bg-transparent font-semibold hover:bg-gray-300 cursor-pointer"
+                  className="border-2 border-gray-500 text-gray-800 text-md bg-transparent font-semibold cursor-pointer"
                 >
-                  Contact Us
+                  Get Rental Quote
                 </Button>
               </Link>
             </div>

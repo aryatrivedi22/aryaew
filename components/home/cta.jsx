@@ -10,7 +10,7 @@ const CTASection = () => {
         transition={{ duration: 0.4 }} // Animation duration and easing
         viewport={{ once: true }}
         href="/products"
-        className="block w-full bg-linear-to-tr from-yellow-600 via-yellow-500/90 to-yellow-500/60 py-6 px-4 shadow transition-all duration-300 hover:shadow-2xl rounded-xl group"
+        className="flex w-full bg-linear-to-tr from-[#708c98] via-[#708c98]/80 to-[#708c98]/50 py-6 px-4 shadow transition-all duration-300 hover:shadow-2xl rounded-xl group"
       >
         <div className="container mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold text-white transition-all duration-300 group-hover:drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] tracking-wide">

@@ -59,17 +59,16 @@ const ProductsSection = () => {
             transition={{ duration: 0.6, ease: "easeOut" }} // Animation duration and easing
             className="text-left md:text-center mx-2 mb-4"
           >
-            <p className="text-yellow-600 font-bold mb-4 text-sm tracking-wider uppercase">
+            <p className="text-[#708c98] font-bold mb-4 text-sm tracking-wider uppercase">
               Explore our products
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              We Provide Best Hydraulic Solutions
+              We Provide the Best Hydraulic Solutions for Various Verticals
             </h2>
             <p className="md:mx-3 text-gray-700 text-lg leading-relaxed">
-              Our Products are known for their quality, design durability and
-              precision engineering. Arya Engineering Works stands as a reliable
-              and experienced supplier of specialized engineering components and
-              industrial hardware.
+              Our products are defined by their operational excellence. We are
+              renowned for quality, robust design, durability, and precision
+              engineering that meets international standards.
             </p>
           </motion.div>
 
@@ -122,7 +121,7 @@ const ProductsSection = () => {
               size="icon"
               onClick={prevSlide}
               disabled={currentIndex === 0}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-yellow-600 hover:bg-yellow-600/90 text-primary-foreground border-none disabled:opacity-50"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-[#708c98] hover:bg-[#708c98]/90 text-primary-foreground border-none disabled:opacity-50"
             >
               <ChevronLeft className="h-6 w-6" />
             </Button>
@@ -132,7 +131,7 @@ const ProductsSection = () => {
               size="icon"
               onClick={nextSlide}
               disabled={currentIndex >= maxIndex}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-yellow-600 hover:bg-yellow-600/90 text-primary-foreground border-none disabled:opacity-50"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-[#708c98] hover:bg-[#708c98]/90 text-primary-foreground border-none disabled:opacity-50"
             >
               <ChevronRight className="h-6 w-6" />
             </Button>
