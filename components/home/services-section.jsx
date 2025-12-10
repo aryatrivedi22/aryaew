@@ -15,7 +15,17 @@ const ServicesSection = () => {
     <section className="px-6 py-12 md:px-10 md:py-20 bg-gray-100">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* LEFT PART */}
+          {/* LEFT SIDE IMAGE */}
+          <div className="relative">
+            <div className="rounded-lg overflow-hidden shadow-2xl">
+              <img
+                src="/hero/services-hero.webp"
+                alt="Industrial engineering components and valves"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          {/* RIGHT SIDE PART */}
           <div>
             <p className="text-[#708c98] font-semibold text-lg mb-4 tracking-wider">
               FLEXIBLE RENTAL SERVICES
@@ -61,17 +71,6 @@ const ServicesSection = () => {
                   Get Rental Quote
                 </Button>
               </Link>
-            </div>
-          </div>
-
-          {/* RIGHT SIDE IMAGE */}
-          <div className="relative">
-            <div className="rounded-lg overflow-hidden shadow-2xl">
-              <img
-                src="/hero/services-hero.jpg"
-                alt="Industrial engineering components and valves"
-                className="w-full h-full object-cover"
-              />
             </div>
           </div>
         </div>
