@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Download } from "lucide-react";
 import CTASection from "@/components/home/cta";
@@ -124,13 +125,18 @@ const Distributor = () => {
 
               {/* Download BUTTON */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Button
-                  className="gap-2 bg-yellow-600 hover:bg-yellow-700"
-                  size="lg"
+                <Link
+                  href="https://docs.google.com/document/d/1gOskHaRVaRfQynK4cdGRIOMd3TYs0SzR/edit?usp=drive_link&ouid=114103550146510230680&rtpof=true&sd=true"
+                  target="_blank"
                 >
-                  <Download className="w-5 h-5" />
-                  Download Questionnaire
-                </Button>
+                  <Button
+                    className="gap-2 bg-[#708c98] hover:bg-[#708c98] cursor-pointer"
+                    size="lg"
+                  >
+                    <Download className="w-5 h-5" />
+                    Download Questionnaire
+                  </Button>
+                </Link>
               </div>
 
               <div className="space-y-4 border-t border-border pt-6">
