@@ -426,10 +426,11 @@ const Rental = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button size="lg" className="gap-2">
               <Phone className="w-5 h-5" />
-              Call: 8850409725 / 9892279517
+              Call: <a href="tel:8850409725" className="hover:underline">8850409725</a> /{" "}
+              <a href="tel:9892279517" className="hover:underline">9892279517</a>
             </Button>
             <a href="mailto:aryaengineeringwork24@gmail.com">
-              <Button size="lg" variant="outline" className="gap-2">
+              <Button size="lg" variant="outline" className="gap-2 cursor-pointer">
                 <Mail className="w-5 h-5" />
                 Email Us
               </Button>

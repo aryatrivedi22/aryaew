@@ -52,7 +52,7 @@ const Footer = () => {
             {/* LOGO */}
             <Link href="/" className="flex items-center gap-3">
               <img
-                src="/logo.png"
+                src="/logoWhite.png"
                 alt="Arya Engineering Works"
                 className="h-11 w-auto"
                 loading="lazy"
@@ -106,14 +106,20 @@ const Footer = () => {
           </div>
 
           {/* CONTACT SECTION */}
-          <div className="md:w-1/5">
+          <div className="md:w-[260px]">
             <h4 className="relative text-2xl font-semibold mb-7">
               Contact Us
               <span className="absolute left-4 -bottom-2 w-8 h-0.5 bg-yellow-600 rounded-full -translate-x-1/2" />
             </h4>
             {/* NUMBERS */}
             <p className="text-xl font-semibold text-primary-foreground mb-2">
-              +91-8850409725 <br /> +91-9892279517
+              <a href="tel:8850409725" className="hover:underline">
+                +91-8850409725
+              </a>{" "}
+              <br />{" "}
+              <a href="tel:9892279517" className="hover:underline">
+                +91-9892279517
+              </a>
             </p>
             <p className="text-md text-primary-foreground/80 leading-relaxed">
               <a
