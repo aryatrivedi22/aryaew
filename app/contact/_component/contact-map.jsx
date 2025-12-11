@@ -55,7 +55,7 @@ export default function ContactMap() {
             href={`https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition-colors"
+            className="inline-flex items-center px-4 py-2 bg-[#708c98] text-white rounded-lg hover:bg-[#708c98] transition-colors"
           >
             <Map className="mr-2" />
             Get Directions

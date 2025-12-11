@@ -9,7 +9,7 @@ import ZoomOutOnScroll from "../ui/zoom-out";
 const slides = [
   {
     image: "/hero/hero-1.webp",
-    badge: "—ENGINEERING TRUST & EXCELLENCE—",
+    badge: "— ENGINEERING TRUST & EXCELLENCE —",
     title: "Advanced Hydraulic Tank Jacking Solutions",
     description:
       "Since 2023, Arya Engineering Works has been a leader in delivering robust industrial fluid power solutions.",
@@ -69,7 +69,7 @@ const HeroCarousel = () => {
 
           <div className="relative h-full flex items-center justify-center">
             <div className="container mx-auto px-4">
-              <div className="max-w-3xl mx-auto text-center text-primary-foreground">
+              <div className="max-w-5xl mx-auto text-center text-primary-foreground">
                 <p className="text-sm font-semibold mb-4 tracking-wider">
                   {slide.badge}
                 </p>

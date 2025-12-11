@@ -1,5 +1,4 @@
 "use client";
-import { Check } from "lucide-react";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { motion } from "motion/react";
@@ -27,27 +26,23 @@ const AboutSection = () => {
           transition={{ duration: 1, type: "spring", stiffness: 100 }}
           viewport={{ once: true }}
         >
-          <p className="text-[#708c98] font-semibold mb-3 text-sm tracking-wider">
-            WHO WE ARE
+          <p className="text-[#708c98] font-semibold mb-3 text-xl tracking-wider">
+            About Arya Engineering Works
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-7">
-            Ultimate Quality Engineering Solutions
+            Driving Innovation in Hydraulics
           </h2>
           <p className="text-gray-700 text-lg mb-4 leading-relaxed">
-            ARYA Engineering Works, under the proprietorship of Ajay Kumar
-            Trivedi, stands as a reliable and experienced supplier of
-            specialized engineering components and industrial hardware. Based in
-            the major industrial hub of Mumbai, Maharashtra, we have built our
-            reputation on a foundation of Quality Products and unwavering
-            commitment to client satisfaction.
+            Founded in 2023 by Proprietor Mr. Ajay Kumar Trivedi, Arya
+            Engineering Works is a premier Manufacturer and Exporter of
+            hydraulic tank jacking systems and industrial valves. We deliver
+            robust, precision-engineered solutions tailored for sectors like
+            Heavy Construction, Marine, and SPMs.
           </p>
           <p className="text-gray-700 text-lg leading-relaxed">
-            We leverage our expertise to ensure On-time Delivery and offer a
-            comprehensive range of products including High-Pressure Ball Valves,
-            Needle Valves, Wiper Motors, and essential Electrical Components.
-            Our ability to handle OEM Supply & B2B Bulk Orders along with Custom
-            Fittings & Assemblies makes us a versatile and dependable source,
-            dedicated to providing high-quality solutions for industry leaders.
+            Our expert team ensures every unit meets global standards for
+            durability, reliability, and safety, making client satisfaction our
+            top priority.
           </p>
           <Link href="/about">
             <Button
@@ -65,19 +60,26 @@ const AboutSection = () => {
           whileInView={{ x: 0, opacity: 1 }} // Animate to final position
           transition={{ duration: 1, type: "spring", stiffness: 100 }}
           viewport={{ once: true }}
-          className="bg-gray-300 p-8 rounded-lg"
+          className="flex flex-col gap-2"
         >
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">
-            We deal in a wide range of products including:
-          </h3>
-          <ul className="space-y-4 list-none m-0 p-0">
-            {products.map((product) => (
-              <li key={product} className="flex items-center gap-3">
-                <Check className="text-[#708c98]" aria-hidden="true" />
-                <span className="text-gray-700 text-lg">{product}</span>
-              </li>
-            ))}
-          </ul>
+          {/* ABOUT SECTION IMAGE */}
+          <img
+            src="/about/home-aboutSection.webp"
+            alt="image"
+            className="rounded-xl md:h-64"
+          />
+          <div className="bg-gray-200 p-3 rounded-xl">
+            <h2 className="text-gray-900 mb-2">
+              Unmatched Precision in Hydraulic Engineering
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              As your global partner in industrial engineering, Arya Engineering
+              Works is dedicated to powering your operations. We specialize in
+              delivering hydraulic equipment that combines rugged durability
+              with superior performance, ensuring your projects run smoothly
+              anywhere in the world.
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>
