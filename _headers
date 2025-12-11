@@ -1,0 +1,17 @@
+/favicon.ico
+  Cache-Control: public, max-age=0, must-revalidate
+
+/favicon.png
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*.png
+  Cache-Control: public, max-age=604800
+
+/*.jpg
+  Cache-Control: public, max-age=604800
+
+/*.jpeg
+  Cache-Control: public, max-age=604800
+
+/*.svg
+  Cache-Control: public, max-age=604800

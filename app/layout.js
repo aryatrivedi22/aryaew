@@ -11,6 +11,9 @@ const nunito = Nunito({
 
 export const metadata = {
   title: "Arya Engineering Works",
+  icons: {
+    icon: "/favicon.ico",
+  },
   description:
     "Quality products and on-time delivery from Arya Engineering Works — valves, fittings, and industrial hardware.",
   keywords: [
