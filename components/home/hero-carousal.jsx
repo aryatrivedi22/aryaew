@@ -4,6 +4,13 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import ZoomOutOnScroll from "../ui/zoom-out";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap", // 'swap' ensures text is visible while the font loads
+  variable: "--font-montserrat", // Optional: for using with CSS variables/Tailwind
+});
 
 // Hero Carousel Component
 const slides = [
@@ -46,7 +53,9 @@ const HeroCarousel = () => {
   };
 
   return (
-    <div className="relative h-[600px] overflow-hidden">
+    <div
+      className={`relative h-[600px] overflow-hidden ${montserrat.className}`}
+    >
       {slides.map((slide, index) => (
         // Slide Item
         <div
@@ -64,12 +73,12 @@ const HeroCarousel = () => {
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${slide.image})` }}
           >
-            <div className="absolute inset-0 bg-black/20" />
+            <div className="absolute inset-0 bg-black/30" />
           </div>
 
           <div className="relative h-full flex items-center justify-center">
             <div className="container mx-auto px-4">
-              <div className="max-w-5xl mx-auto text-center text-primary-foreground">
+              <div className="max-w-6xl mx-auto text-center text-primary-foreground">
                 <p className="text-sm font-semibold mb-4 tracking-wider">
                   {slide.badge}
                 </p>
