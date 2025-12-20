@@ -37,7 +37,7 @@ const Products = () => {
                 >
                   <div className="aspect-video overflow-hidden">
                     <img
-                      src={product.image}
+                      src={product.image[0]}
                       alt={product.title}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />
