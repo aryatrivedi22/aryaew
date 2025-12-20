@@ -3,17 +3,6 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import { motion } from "motion/react";
 
-const products = [
-  "High Pressure Ball Valves",
-  "Electrical Components",
-  "Needle Valves",
-  "Industrial Hardware",
-  "T Elbows",
-  "Custom Fittings & Assemblies",
-  "Wiper Motors",
-  "OEM Supply & B2B Bulk Orders",
-];
-
 // ABOUT SECTION COMPONENT FOR HOME PAGE
 const AboutSection = () => {
   return (

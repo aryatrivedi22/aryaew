@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { productsHomePage } from "@/app/data/products-home";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const ProductsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -97,7 +98,9 @@ const ProductsSection = () => {
                     <div className="bg-background rounded-lg overflow-hidden border-4 border-primary/20 hover:shadow-lg hover:scale-95 transition-all duration-200 cursor-pointer">
                       {/* Products Images */}
                       <div className="aspect-square overflow-hidden">
-                        <img
+                        <Image
+                          width={1200}
+                          height={1200}
                           src={product.image}
                           alt={product.title}
                           className="w-full h-full object-cover"

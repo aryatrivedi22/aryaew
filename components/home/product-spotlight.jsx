@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import Link from "next/link";
 import { LuSquareCheckBig } from "react-icons/lu";
 
@@ -69,7 +70,9 @@ const ProductSpotlight = () => {
           {/* RIGHT SIDE IMAGE */}
           <div className="relative">
             <div className="rounded-lg overflow-hidden shadow-2xl">
-              <img
+              <Image
+                width={1200}
+                height={1200}
                 src="/hero/service-spotlight.webp"
                 alt="Industrial engineering components and valves"
                 className="w-full h-full object-cover"
