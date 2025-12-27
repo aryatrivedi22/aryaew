@@ -8,7 +8,7 @@ const ContactSection = () => {
         {/* Hero Banner */}
         <div className="relative bg-linear-to-r from-primary/90 to-primary/70 overflow-hidden mb-16 min-h-[350px] flex flex-col items-center justify-center gap-4">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLW9wYWNpdHk9IjAuMSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-30"></div>
-          <h1 className="text-5xl md:text-6xl font-bold text-white z-10 tracking-tight">
+          <h1 className="font-montserrat text-5xl md:text-6xl font-bold text-white z-10 tracking-tight">
             CONTACT US
           </h1>
           <p className="w-11/12 text-center text-xl font-semibold text-gray-200">

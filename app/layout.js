@@ -1,7 +1,8 @@
-import { Nunito } from "next/font/google";
+import { montserrat } from "@/lib/fonts";
 import "./globals.css";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import { Nunito } from "next/font/google";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -100,7 +101,7 @@ const structuredData = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={montserrat.variable}>
       <body className={`${nunito.className}`}>
         <script
           type="application/ld+json"

@@ -4,13 +4,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import ZoomOutOnScroll from "../ui/zoom-out";
-import { Montserrat } from "next/font/google";
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  display: "swap", // 'swap' ensures text is visible while the font loads
-  variable: "--font-montserrat", // Optional: for using with CSS variables/Tailwind
-});
 
 // Hero Carousel Component
 const slides = [
@@ -53,9 +46,7 @@ const HeroCarousel = () => {
   };
 
   return (
-    <div
-      className={`relative h-[600px] overflow-hidden ${montserrat.className}`}
-    >
+    <div className={"font-montserrat relative h-[600px] overflow-hidden"}>
       {slides.map((slide, index) => (
         // Slide Item
         <div

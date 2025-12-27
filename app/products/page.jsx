@@ -17,7 +17,7 @@ const Products = () => {
         {/* Hero Section */}
         <section className="bg-linear-to-r from-primary via-primary/90 to-primary/70 py-20 px-4 min-h-[350px] flex items-center">
           <div className="container mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-primary-foreground mb-4">
+            <h1 className="font-montserrat text-5xl md:text-6xl font-bold text-primary-foreground mb-4">
               OUR PRODUCTS
             </h1>
             <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">

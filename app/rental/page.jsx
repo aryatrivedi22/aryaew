@@ -93,7 +93,7 @@ const Rental = () => {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white text-center">
+          <h1 className="font-montserrat text-5xl md:text-6xl font-bold text-white text-center">
             RENTAL SERVICES
           </h1>
         </div>

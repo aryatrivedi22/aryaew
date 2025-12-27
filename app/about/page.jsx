@@ -80,7 +80,7 @@ const About = () => {
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 container mx-auto px-4">
-          <h1 className="text-center text-5xl md:text-6xl font-bold text-white">
+          <h1 className="text-center text-5xl md:text-6xl font-bold text-white font-montserrat">
             ABOUT US
           </h1>
         </div>
@@ -205,22 +205,20 @@ const About = () => {
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <div className="relative">
-                <img
-                  src="/about/ajayTriwedi.webp"
-                  alt="Mr. Ajay Kumar Trivedi - Proprietor"
-                  className="rounded-lg shadow-xl w-full max-w-md mx-auto"
-                />
-              </div>
-            </div>
-            <div className="order-1 lg:order-2">
+            <div className="relative">
               <p className="text-primary font-semibold mb-3 text-sm tracking-widest uppercase">
                 Leadership
               </p>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Proprietor's Message
               </h2>
+              <img
+                src="/about/ajayTriwedi.webp"
+                alt="Mr. Ajay Kumar Trivedi - Proprietor"
+                className="rounded-lg shadow-xl w-full max-w-md mx-auto"
+              />
+            </div>
+            <div className="order-1 lg:order-2">
               <blockquote className="border-l-4 border-primary pl-6 mb-6">
                 <p className="text-xl text-foreground italic leading-relaxed">
                   "At Arya Engineering Works, our mission is simple: to provide

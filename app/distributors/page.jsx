@@ -17,7 +17,7 @@ const Distributor = () => {
                 "url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069')",
             }}
           />
-          <div className="relative z-20 text-center text-white px-4">
+          <div className="font-montserrat relative z-20 text-center text-white px-4">
             <h1 className="text-5xl md:text-6xl font-bold mb-4">
               DISTRIBUTORS
             </h1>
