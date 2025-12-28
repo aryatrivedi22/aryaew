@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import products from "@/app/data/products";
+import products from "@/data/products";
 import { ArrowRight } from "lucide-react";
 
 const Products = () => {

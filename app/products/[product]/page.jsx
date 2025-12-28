@@ -8,7 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { getProductById } from "@/app/data/products";
+import { getProductById } from "@/data/products";
 import {
   ArrowLeft,
   CheckCircle2,

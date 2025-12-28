@@ -2,9 +2,10 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { productsHomePage } from "@/app/data/products-home";
+import products from "@/data/products";
 import { motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const ProductsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -35,19 +36,19 @@ const ProductsSection = () => {
 
   const nextSlide = () => {
     setCurrentIndex((prev) => {
-      const maxIndex = productsHomePage.length - itemsPerView;
+      const maxIndex = products.length - itemsPerView;
       return prev >= maxIndex ? 0 : prev + 1;
     });
   };
 
   const prevSlide = () => {
     setCurrentIndex((prev) => {
-      const maxIndex = productsHomePage.length - itemsPerView;
+      const maxIndex = products.length - itemsPerView;
       return prev <= 0 ? maxIndex : prev - 1;
     });
   };
 
-  const maxIndex = productsHomePage.length - itemsPerView;
+  const maxIndex = products.length - itemsPerView;
 
   return (
     <section id="products" className="py-12 bg-gray-200">
@@ -84,9 +85,9 @@ const ProductsSection = () => {
                   }%)`,
                 }}
               >
-                {productsHomePage.map((product, index) => (
+                {products.map((product) => (
                   <div
-                    key={index}
+                    key={product.id}
                     className="shrink-0"
                     style={{
                       width: `calc(${100 / itemsPerView}% - ${
@@ -94,25 +95,27 @@ const ProductsSection = () => {
                       }px)`,
                     }}
                   >
-                    {/* Single product card */}
-                    <div className="bg-background rounded-lg overflow-hidden border-4 border-primary/20 hover:shadow-lg hover:scale-95 transition-all duration-200 cursor-pointer">
-                      {/* Products Images */}
-                      <div className="aspect-square overflow-hidden">
-                        <Image
-                          width={1200}
-                          height={1200}
-                          src={product.image}
-                          alt={product.title}
-                          className="w-full h-full object-cover"
-                        />
+                    <Link href={`/products/${product.id}`}>
+                      {/* Single product card */}
+                      <div className="bg-background rounded-lg overflow-hidden border-4 border-primary/20 hover:shadow-lg hover:scale-95 transition-all duration-200 cursor-pointer">
+                        {/* Products Images */}
+                        <div className="aspect-square overflow-hidden">
+                          <Image
+                            width={1200}
+                            height={1200}
+                            src={product.image[0]}
+                            alt={product.title}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        {/* Title Images */}
+                        <div className="py-2 h-24 text-center">
+                          <h3 className="text-lg font-bold text-gray-900">
+                            {product.title}
+                          </h3>
+                        </div>
                       </div>
-                      {/* Title Images */}
-                      <div className="py-2 text-center">
-                        <h3 className="text-lg font-bold text-gray-900">
-                          {product.title}
-                        </h3>
-                      </div>
-                    </div>
+                    </Link>
                   </div>
                 ))}
               </div>

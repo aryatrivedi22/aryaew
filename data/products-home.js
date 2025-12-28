@@ -1,9 +1,9 @@
 // Home page products data
 export const productsHomePage = [
     {
-        image: "/products/ball-valve.jpg",
-        title: "High Pressure Ball Valves",
-        description: "Premium quality ball valves designed for high-pressure industrial applications.",
+        image: "/product/Jet_Cleaner_System/Jet_Cleaner_System2.jpeg",
+        title: "SS Industrial Hot Water High-Pressure Jet Cleaner System",
+        description: "Industrial-grade hot water high-pressure cleaner engineered for pharmaceutical, food & beverage, and dairy industries.",
     },
     {
         image: "/products/electrical-components.jpg",

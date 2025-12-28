@@ -7,7 +7,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
-import { quickNavigation, rentalProducts } from "../data/rental-data";
+import { quickNavigation, rentalProducts } from "../../data/rental-data";
 import { useState } from "react";
 
 // IMAGE ELEMENT
