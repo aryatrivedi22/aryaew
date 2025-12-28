@@ -13,8 +13,7 @@ const Distributor = () => {
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069')",
+              backgroundImage: "/hero/distributors-hero.webp",
             }}
           />
           <div className="font-montserrat relative z-20 text-center text-white px-4">

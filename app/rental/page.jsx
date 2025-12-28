@@ -88,7 +88,7 @@ const Rental = () => {
       {/* Hero Section */}
       <div className="relative h-[350px] overflow-hidden">
         <img
-          src="/about/services-hero.jpg"
+          src="/hero/rentalservices-hero.webp"
           alt="Rental Services"
           className="w-full h-full object-cover"
         />

@@ -1,5 +1,43 @@
 const products = [
     {
+        id: "hydraulic-tank-jacking-equipment-systems",
+        image: [
+            "/product/Hydraulic_Tank/1.webp",
+            "/product/Hydraulic_Tank/2.webp"
+        ],
+        title: "Hydraulic Tank Jacking Equipment Systems",
+        description:
+            "Advanced hydraulic tank jacking systems engineered for safe, stable, and efficient vertical tank erection and heavy lifting applications.",
+        overview:
+            "Welcome to Arya Engineering Works, your trusted partner for advanced tank erection and lifting solutions. Serving diverse industries since 2023, our Hydraulic Tank Jacking Systems are engineered for safety, stability, and efficiency. Manufactured at our state-of-the-art facility in Mahape, Navi Mumbai, these systems are the preferred choice for EPC companies and tank contractors adhering to API 653 and OISD standards. Our equipment offers a total solution for vertical tank construction, capable of handling massive structures — including proven success with large-diameter floating roof tanks (up to 100 meters) and heavy-weight lifting capacities of up to 1900 tons. We go beyond manufacturing by partnering with your project execution team to provide Job Hazard Analysis (JHA), stability calculations, and on-site expertise, ensuring your tank is erected safely and precisely.",
+        specifications: [
+            { label: "Lifting Capacity", value: "12 MT, 18 MT, 25 MT (Per Jack)" },
+            { label: "Upright Height", value: "3,500 mm" },
+            { label: "Shell Plate Width", value: "Standard: 2500 mm | Special: Up to 3000 mm" },
+            { label: "Test Load", value: "Tested at 1.5 times rated capacity" },
+            { label: "System Components", value: "Jack Rod, Slipper, Lifting Arm, Safety Lugs, Guide Lugs" },
+            { label: "Hose Coupling", value: "High-Pressure with Shut-off Cock" },
+            { label: "Standards Compliance", value: "Suitable for API 653 / OISD norms" },
+            { label: "Brand", value: "Arya Engineering Works" }
+        ],
+        features: [
+            "Robust Structural Design: Sturdy 3500 mm upright height with adjustable stays and heavy-duty base plates ensures maximum stability during lifting of heavy shell courses.",
+            "Comprehensive Lifting Components: Complete system kit including hydraulic jacks, climb rods, slippers, lifting arms, and welded lifting lugs/guides for seamless integration.",
+            "Safety & Load Testing: Manufactured under strict quality norms and rigorously tested at 1.5 times the rated capacity for risk-free operation.",
+            "High-Pressure Fluid Control: High-pressure hose couplings with shut-off cocks allow precise synchronization and control of the lifting mechanism.",
+            "Versatile Shell Accommodation: Standard models support 2500 mm shell width plates, with custom options up to 3000 mm.",
+            "Expert Operational Support: Includes deputation of trained jack operators and technicians for safe and efficient erection."
+        ],
+        applications: [
+            "Field Erected Storage Tanks: Top-to-bottom construction of large diameter storage tanks in refineries and tank farms.",
+            "Tank Capacity Expansion: Lifting existing tanks to add shell rings or courses and increase storage volume.",
+            "Maintenance & Repair: Bottom plate replacement, foundation repair, and settlement correction.",
+            "Dismantling Projects: Controlled lowering of tanks for safe dismantling of old or decommissioned infrastructure."
+        ],
+        cta:
+            "Ready to elevate your tank construction projects with certified safety? Contact Arya Engineering Works today for a consultation on our Hydraulic Tank Jacking Systems and let our engineering experts calculate the perfect stability solution for your next lift."
+    },
+    {
         id: "ss-industrial-hot-water-jet-cleaner",
         image: ["/product/Jet_Cleaner_System/Jet_Cleaner_System2.jpeg", "/product/Jet_Cleaner_System/Jet_Cleaner_System.jpeg", "/product/Jet_Cleaner_System/Jet_Cleaner_System3.jpeg", "/product/Jet_Cleaner_System/Jet_Cleaner_System4.jpeg"],
         title: "SS Industrial Hot Water High-Pressure Jet Cleaner System",

@@ -48,7 +48,7 @@ const ProductSpotlight = () => {
 
             {/* BUTTONS */}
             <div className="flex flex-wrap gap-4">
-              <Link href="/products">
+              <Link href="/products/hydraulic-tank-jacking-equipment-systems">
                 <Button
                   size="lg"
                   className="font-semibold text-md bg-[#708c98] hover:bg-[#708c98] cursor-pointer"

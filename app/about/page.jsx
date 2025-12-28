@@ -74,7 +74,7 @@ const About = () => {
         <Image
           fill
           loading="eager"
-          src="/about/services-hero.jpg"
+          src="/about/aboutus.webp"
           alt="Arya Engineering Works"
           className="absolute inset-0 object-cover"
         />
@@ -113,7 +113,7 @@ const About = () => {
               </p>
             </div>
             <img
-              src="/about/oem-supply.jpg"
+              src="/about/oem-supply.webp"
               alt="Arya Engineering Works Manufacturing"
               className="rounded-lg shadow-xl w-full h-[400px] object-cover"
             />
@@ -192,7 +192,7 @@ const About = () => {
             </div>
             <div>
               <img
-                src="/about/industrial-hardware.jpg"
+                src="/about/WhyChooseUs.webp"
                 alt="Industrial Hardware"
                 className="rounded-lg shadow-xl w-full h-[500px] object-cover"
               />
