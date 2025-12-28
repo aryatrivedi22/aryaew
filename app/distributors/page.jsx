@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Download } from "lucide-react";
 import CTASection from "@/components/home/cta";
+import Image from "next/image";
 
 const Distributor = () => {
   return (
@@ -9,15 +10,16 @@ const Distributor = () => {
       <main>
         {/* Hero Section */}
         <section className="relative h-[350px] flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-linear-to-r from-primary/95 to-gray-700/90 z-10" />
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "/hero/distributors-hero.webp",
-            }}
+          <Image
+            fill
+            loading="eager"
+            src="/hero/distributors-hero.jpg"
+            alt="Arya Engineering Works"
+            className="absolute inset-0 object-cover"
           />
-          <div className="font-montserrat relative z-20 text-center text-white px-4">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="relative z-20 text-center text-white px-4">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 font-montserrat">
               DISTRIBUTORS
             </h1>
           </div>
