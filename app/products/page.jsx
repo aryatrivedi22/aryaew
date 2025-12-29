@@ -9,14 +9,23 @@ import {
 } from "@/components/ui/card";
 import products from "@/data/products";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const Products = () => {
   return (
     <div className="min-h-screen">
       <main>
         {/* Hero Section */}
-        <section className="bg-linear-to-r from-primary via-primary/90 to-primary/70 py-20 px-4 min-h-[350px] flex items-center">
-          <div className="container mx-auto text-center">
+        <section className="relative py-20 px-4 min-h-[350px] flex items-center">
+          <Image
+            fill
+            loading="eager"
+            src="/hero/products-hero.webp"
+            alt="Arya Engineering Works"
+            className="absolute inset-0 object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="relative z-10 mx-auto text-center">
             <h1 className="font-montserrat text-5xl md:text-6xl font-bold text-primary-foreground mb-4">
               OUR PRODUCTS
             </h1>
