@@ -6,7 +6,9 @@
 
 **Aryaew** is a modern freelance/business website built to showcase services, products, and company information with a clean and professional design. The goal of this project is to provide a strong online presence and make it easy for clients to explore offerings and get in touch.
 
-### ✨ Project Highlights
+Link: [aryaew.com](https://aryaew.com/)
+
+### Project Highlights
 - Clean and professional UI  
 - Responsive design for all devices  
 - Service and product showcase  
@@ -15,9 +17,9 @@
 
 ---
 
-### 👨‍💻 Built By
+### Built By
 **Piyush Yadav**  
-🔗 Portfolio: https://piyushyadav.vercel.app/
+Portfolio: https://piyushyadav.vercel.app/
 
 ---
 
