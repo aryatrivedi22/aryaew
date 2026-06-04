@@ -1,11 +1,11 @@
 "use client";
+
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ZoomOutOnScroll from "../ui/zoom-out";
+import { delay, shouldRender } from "@/lib/simulator";
 
-// Hero Carousel Component
 const slides = [
   {
     image: "/hero/hero-1.webp",
@@ -26,118 +26,164 @@ const slides = [
     title: "POWER PACK",
     description: "",
   },
-  {
-    image: "/hero/hero-4.webp",
-    badge: "",
-    title: "HYDRAULIC CYLINDER",
-    description: "",
-  },
 ];
 
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
+  // 🔻 New states
+  const [ready, setReady] = useState(false);
+  const [error, setError] = useState(false);
+  const [canRender, setCanRender] = useState(true);
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
+  // 🔻 simulate initial delay (3–8 sec)
+  useEffect(() => {
+    delay(3000, 8000).then(() => setReady(true));
+  }, []);
+
+  // 🔻 random render block (hero kabhi gayab)
+  useEffect(() => {
+    setCanRender(shouldRender(0.8)); // 80% chance
+  }, []);
+
+  // 🔻 random failure (hero broken feel)
+  useEffect(() => {
+    if (Math.random() < 0.25) {
+      setError(true);
+    }
+  }, []);
+
+  // 🔻 random slide auto-change (laggy feel)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (Math.random() < 0.5) return; // sometimes stuck
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 4000 + Math.random() * 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // ❌ completely not rendered
+  if (!canRender) return null;
+
+  // ⏳ loading state
+  if (!ready) {
+    return (
+      <div className="h-[60vh] md:h-[600px] flex items-center justify-center bg-gray-100 text-gray-500 text-sm">
+        Loading...
+      </div>
+    );
+  }
+
+  // ⚠️ error state
+  if (error) {
+    return (
+      <div className="h-[60vh] md:h-[600px] flex items-center justify-center bg-gray-100 text-red-400 text-sm">
+        Failed to load hero content
+      </div>
+    );
+  }
 
   return (
-    <div className={"font-montserrat relative h-[600px] overflow-hidden"}>
-      {slides.map((slide, index) => (
-        // Slide Item
-        <div
-          key={index}
-          // make inactive slides non-interactive and keep active slide on top
-          className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-            index === currentSlide
-              ? "opacity-100 pointer-events-auto z-20"
-              : "opacity-0 pointer-events-none z-10"
-          }`}
-          aria-hidden={index !== currentSlide}
-        >
-          {/* Background Image */}
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${slide.image})` }}
-          >
-            <div className="absolute inset-0 bg-black/30" />
-          </div>
+    <div className="relative h-[60vh] md:h-[600px] overflow-hidden font-montserrat">
+      {slides.map((slide, index) => {
+        const hideContent = !shouldRender(0.85); // inner content drop
 
-          <div className="relative h-full flex items-center justify-center">
-            <div className="container mx-auto px-4">
-              <div className="max-w-6xl mx-auto text-center text-primary-foreground">
-                <p className="text-sm font-semibold mb-4 tracking-wider">
-                  {slide.badge}
-                </p>
-                <ZoomOutOnScroll>
-                  <h1 className="text-5xl md:text-5xl font-extrabold mb-4 leading-tight">
-                    {slide.title}
-                  </h1>
-                  <p className="text-lg md:text-xl mb-8 text-primary-foreground/90">
-                    {slide.description}
-                  </p>
-                </ZoomOutOnScroll>
-                {/* BUTTONS */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/about">
-                    <Button
-                      size="lg"
-                      className="bg-[#708c98] hover:bg-[#708c98] text-white font-semibold cursor-pointer"
-                    >
-                      EXPLORE PRODUCTS
-                    </Button>
-                  </Link>
-                  <Link href="/contact">
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="bg-transparent text-white font-semibold hover:bg-gray-200 cursor-pointer"
-                    >
-                      REQUEST A QUOTE
-                    </Button>
-                  </Link>
+        return (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-700 ${
+              index === currentSlide ? "opacity-100 z-20" : "opacity-0 z-10"
+            }`}
+          >
+            {/* Background */}
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage: shouldRender(0.8)
+                  ? `url(${slide.image})`
+                  : "none",
+                backgroundColor: "#f3f4f6",
+              }}
+            />
+
+            <div className="absolute inset-0 bg-black/30" />
+
+            {/* Content */}
+            <div className="relative h-full flex items-center justify-center px-4">
+              <div className="text-center text-white max-w-3xl w-full">
+                {!hideContent && (
+                  <>
+                    <p className="text-xs md:text-sm font-semibold mb-3 tracking-wide">
+                      {slide.badge}
+                    </p>
+
+                    <ZoomOutOnScroll>
+                      <h1 className="text-2xl md:text-5xl font-extrabold mb-3 leading-tight">
+                        {slide.title}
+                      </h1>
+
+                      <p className="text-sm md:text-lg mb-6 opacity-90">
+                        {shouldRender(0.7)
+                          ? slide.description
+                          : "Content unavailable"}
+                      </p>
+                    </ZoomOutOnScroll>
+                  </>
+                )}
+
+                {/* Buttons (kabhi disable) */}
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <Button
+                    size="lg"
+                    disabled={!shouldRender(0.7)}
+                    className="bg-[#708c98] text-white text-sm md:text-base"
+                  >
+                    EXPLORE PRODUCTS
+                  </Button>
+
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    disabled={!shouldRender(0.7)}
+                    className="text-white text-sm md:text-base"
+                  >
+                    REQUEST A QUOTE
+                  </Button>
                 </div>
+
+                {/* subtle warning */}
+                {!shouldRender(0.6) && (
+                  <p className="text-[10px] md:text-xs text-red-300 mt-3">
+                    Some resources failed to load.
+                  </p>
+                )}
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
 
-      {/* Navigation Arrows */}
+      {/* Controls (kabhi kaam nahi kare) */}
       <button
-        onClick={prevSlide}
-        // Put arrows above slides so they're always clickable/visible
-        className="absolute left-0.5 md:left-4 top-1/2 -translate-y-1/2 bg-primary-foreground/20 hover:bg-primary-foreground/30 text-primary-foreground p-2 rounded-full transition-colors z-30"
-        aria-label="Previous slide"
+        onClick={() => {
+          if (!shouldRender(0.7)) return;
+          setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+        }}
+        className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-30"
       >
-        <ChevronLeft className="h-6 w-6" />
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-0.5 md:right-4 top-1/2 -translate-y-1/2 bg-primary-foreground/20 hover:bg-primary-foreground/30 text-primary-foreground p-2 rounded-full transition-colors z-30"
-        aria-label="Next slide"
-      >
-        <ChevronRight className="h-6 w-6" />
+        <ChevronLeft />
       </button>
 
-      {/* Dots Indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-30 pointer-events-auto">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${
-              index === currentSlide
-                ? "bg-yellow-600"
-                : "bg-primary-foreground/50"
-            }`}
-          />
-        ))}
-      </div>
+      <button
+        onClick={() => {
+          if (!shouldRender(0.7)) return;
+          setCurrentSlide((prev) => (prev + 1) % slides.length);
+        }}
+        className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-30"
+      >
+        <ChevronRight />
+      </button>
     </div>
   );
 };

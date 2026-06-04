@@ -3,6 +3,21 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Prevent layout shift */
+body {
+  -ms-overflow-style: none;
+}
+
 .font-montserrat {
   font-family: var(--font-montserrat), sans-serif;
 }
